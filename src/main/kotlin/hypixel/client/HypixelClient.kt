@@ -32,7 +32,7 @@ class HypixelClient(private val apiKey: String) {
 
         }
     }
-    private suspend inline fun <reified T> makeRequest(url: String, vararg parameters: Pair<String, String>): T{
+    internal suspend inline fun <reified T> makeRequest(url: String, vararg parameters: Pair<String, String>): T{
         return client.get{
             url(url)
             parameters.forEach { (key, value) ->

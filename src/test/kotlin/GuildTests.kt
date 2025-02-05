@@ -1,6 +1,3 @@
-package guild
-
-import Config
 import com.dergruenkohl.hypixel.client.HypixelClient
 import com.dergruenkohl.hypixel.client.getGuildById
 import com.dergruenkohl.hypixel.client.getGuildByName
