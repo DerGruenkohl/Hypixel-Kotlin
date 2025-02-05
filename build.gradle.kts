@@ -10,8 +10,7 @@ plugins {
 }
 
 group = "com.dergruenkohl"
-version = "0.1.2"
-val meow = version
+version = "0.1.3"
 
 repositories {
     mavenCentral()
@@ -30,15 +29,14 @@ dependencies {
 }
 tasks.withType<ShadowJar> {
     mergeServiceFiles()
-    archiveFileName = "Hypixel-Kotlin-$version.jar"
+    archiveFileName = "Hypixel-Kotlinjar"
 }
 
 
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            artifact(tasks["shadowJar"])
-            version = meow.toString()
+            from(components["java"])
         }
     }
 }
