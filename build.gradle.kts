@@ -11,6 +11,7 @@ plugins {
 
 group = "com.dergruenkohl"
 version = "0.1.2"
+val meow = version
 
 repositories {
     mavenCentral()
@@ -37,6 +38,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             artifact(tasks["shadowJar"])
+            version = meow.toString()
         }
     }
 }
