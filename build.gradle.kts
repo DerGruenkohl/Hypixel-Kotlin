@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.dergruenkohl"
-version = "1.0"
+version = "0.1.2"
 
 repositories {
     mavenCentral()
@@ -36,7 +36,9 @@ tasks.withType<ShadowJar> {
 publishing {
     publications {
         create<MavenPublication>("maven") {
+            groupId = group.toString()
             artifact(tasks["shadowJar"])
+            from(components["java"])
         }
     }
 }
