@@ -29,16 +29,14 @@ dependencies {
 }
 tasks.withType<ShadowJar> {
     mergeServiceFiles()
-    archiveFileName = "Hypixel-Kotlin.jar"
+    archiveFileName = "Hypixel-Kotlin-$version.jar"
 }
 
 
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = group.toString()
             artifact(tasks["shadowJar"])
-            from(components["java"])
         }
     }
 }
