@@ -29,7 +29,7 @@ dependencies {
 }
 tasks.withType<ShadowJar> {
     mergeServiceFiles()
-    archiveFileName = "Hypixel-Kotlinjar"
+    archiveFileName = "Hypixel-Kotlin.jar"
 }
 
 
