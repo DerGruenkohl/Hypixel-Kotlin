@@ -11,7 +11,7 @@ data class Guild(
     @SerialName("banner")
     val banner: Banner? = null,
     @SerialName("chatMute")
-    val chatMute: Long,
+    val chatMute: Long? = null,
     @SerialName("coins")
     val coins: Int,
     @SerialName("coinsEver")
@@ -35,7 +35,7 @@ data class Guild(
     @SerialName("ranks")
     val ranks: List<Rank>,
     @SerialName("tag")
-    val tag: String,
+    val tag: String? = null,
     @SerialName("tagColor")
-    val tagColor: String
+    val tagColor: String? = null,
 )

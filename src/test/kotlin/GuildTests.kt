@@ -12,7 +12,9 @@ class GuildTests {
     fun testGetGuildByPlayer() {
         runBlocking {
             val response = client.getGuildByPlayer("e1e8e316f9414911b8f011dd887f8a92")
+            val r2 = client.getGuildByPlayer("65542bfb24a84fe9b62cc755afd72937")
             assert(response.success)
+            assert(r2.success)
         }
     }
     @Test

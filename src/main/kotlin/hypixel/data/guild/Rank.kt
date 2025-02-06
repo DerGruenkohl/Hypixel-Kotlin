@@ -9,7 +9,7 @@ data class Rank(
     @SerialName("created")
     val created: Long,
     @SerialName("default")
-    val default: Boolean,
+    val default: Boolean = false,
     @SerialName("name")
     val name: String,
     @SerialName("priority")
