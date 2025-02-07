@@ -39,7 +39,7 @@ data class ProfileData(
     val profileID: String,
     @SerialName("community_upgrades")
     val communityUpgrades: JsonElement,
-    val banking: String? = null,
+    val banking: JsonElement? = null,
     @Serializable(with = ProfileMemberDeserializer::class)
     val members: List<ProfileMember>
 
