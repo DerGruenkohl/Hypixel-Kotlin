@@ -42,7 +42,9 @@ data class ProfileData(
     val banking: String? = null,
     @Serializable(with = ProfileMemberDeserializer::class)
     val members: List<ProfileMember>
+
     )
+
 
 object ProfileMemberDeserializer : KSerializer<List<ProfileMember>> {
     override val descriptor: SerialDescriptor = buildClassSerialDescriptor("ProfileMember")
@@ -81,8 +83,16 @@ data class ProfileMember(
     val currencies: CoinData? = null,
     @SerialName("collection")
     val collections: Collections? = null,
+    val bestiary: Bestiary? = null,
 
 )
+@Serializable
+data class Bestiary(
+    val migrations: Boolean = false,
+    val kills: JsonElement? = null,
+)
+
+
 @Serializable
 data class LevelData(
     val experience: Int,
