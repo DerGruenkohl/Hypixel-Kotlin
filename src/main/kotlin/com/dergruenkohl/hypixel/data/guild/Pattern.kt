@@ -1,4 +1,4 @@
-package hypixel.data.guild
+package com.dergruenkohl.hypixel.data.guild
 
 
 import kotlinx.serialization.SerialName

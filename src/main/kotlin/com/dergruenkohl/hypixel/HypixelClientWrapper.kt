@@ -1,9 +1,9 @@
-package hypixel
+package com.dergruenkohl.hypixel
 
 import com.dergruenkohl.hypixel.client.*
 import com.dergruenkohl.hypixel.data.player.PlayerReply
-import hypixel.data.profile.ProfileMember
-import hypixel.data.profile.ProfileReply
+import com.dergruenkohl.hypixel.data.profile.ProfileMember
+import com.dergruenkohl.hypixel.data.profile.ProfileReply
 import kotlinx.coroutines.runBlocking
 
 class HypixelClientWrapper(private val client: HypixelClient) {

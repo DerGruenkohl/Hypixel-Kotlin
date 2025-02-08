@@ -1,6 +1,6 @@
 package com.dergruenkohl.hypixel.client
 
-import hypixel.data.guild.GuildReply
+import com.dergruenkohl.hypixel.data.guild.GuildReply
 
 suspend fun HypixelClient.getGuildByPlayer(uuid: String): GuildReply {
     return this.makeAuthenticatedRequest("guild", "player" to uuid)

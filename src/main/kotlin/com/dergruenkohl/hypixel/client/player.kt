@@ -1,10 +1,10 @@
 package com.dergruenkohl.hypixel.client
 
 import com.dergruenkohl.hypixel.data.player.PlayerReply
-import hypixel.data.profile.ProfileData
-import hypixel.data.profile.ProfileMember
-import hypixel.data.profile.ProfileReply
-import hypixel.data.profile.ProfilesReply
+import com.dergruenkohl.hypixel.data.profile.ProfileMember
+import com.dergruenkohl.hypixel.data.profile.ProfileReply
+import com.dergruenkohl.hypixel.data.profile.ProfilesReply
+import com.dergruenkohl.hypixel.exceptions.HypixelException
 
 suspend fun HypixelClient.getPlayer(uuid: String): PlayerReply {
     return this.makeAuthenticatedRequest("player", "uuid" to uuid)
@@ -27,4 +27,21 @@ suspend fun HypixelClient.getSelectedProfileMember(uuid: String): ProfileMember?
     return reply.profile?.members?.first {
         it.uuid.replace("-", "") == uuid.replace("-", "")
     }?: return null
+}
+suspend fun HypixelClient.getProfileReply(uuid: String, profileID: String): ProfileReply {
+    val profile: ProfileReply = this.makeAuthenticatedRequest<ProfileReply>("skyblock/profile", "profile" to profileID)
+    if (!profile.success) {
+        throw HypixelException("Failed to get profile")
+    }
+    return profile
+}
+
+suspend fun HypixelClient.getProfileMember(uuid: String, profileID: String): ProfileMember {
+    val profile = this.getProfileReply(uuid, profileID)
+    if (!profile.success) {
+        throw HypixelException("Failed to get profile")
+    }
+    return profile.profile?.members?.first {
+        it.uuid.replace("-", "") == uuid.replace("-", "")
+    }?: throw HypixelException("Failed to get member")
 }

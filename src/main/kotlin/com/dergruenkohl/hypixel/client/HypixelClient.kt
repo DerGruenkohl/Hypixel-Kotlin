@@ -1,6 +1,6 @@
 package com.dergruenkohl.hypixel.client
 
-import hypixel.data.profile.ProfileMemberDeserializer
+import com.dergruenkohl.hypixel.data.profile.ProfileMemberDeserializer
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
@@ -12,7 +12,6 @@ import io.ktor.serialization.kotlinx.json.*
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.contextual
-import kotlinx.serialization.modules.serializersModuleOf
 
 class HypixelClient(private val apiKey: String) {
     val module = SerializersModule {
