@@ -7,9 +7,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Achievements(
     @SerialName("EXPERIENCE_KINGS")
-    val eXPERIENCEKINGS: Int? = null,
+    val eXPERIENCEKINGS: Long? = null,
     @SerialName("ONLINE_PLAYERS")
-    val oNLINEPLAYERS: Int? = null,
+    val oNLINEPLAYERS: Long? = null,
     @SerialName("WINNERS")
-    val wINNERS: Int? = null
+    val wINNERS: Long? = null
 )

@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Banner(
     @SerialName("Base")
-    val base: Int,
+    val base: Long,
     @SerialName("Patterns")
     val patterns: List<Pattern>
 )

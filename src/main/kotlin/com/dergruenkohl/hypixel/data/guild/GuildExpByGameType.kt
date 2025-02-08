@@ -7,59 +7,59 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class GuildExpByGameType(
     @SerialName("ARCADE")
-    val aRCADE: Int,
+    val aRCADE: Long,
     @SerialName("ARENA")
-    val aRENA: Int,
+    val aRENA: Long,
     @SerialName("BATTLEGROUND")
-    val bATTLEGROUND: Int,
+    val bATTLEGROUND: Long,
     @SerialName("BEDWARS")
-    val bEDWARS: Int,
+    val bEDWARS: Long,
     @SerialName("BUILD_BATTLE")
-    val bUILDBATTLE: Int,
+    val bUILDBATTLE: Long,
     @SerialName("DUELS")
-    val dUELS: Int,
+    val dUELS: Long,
     @SerialName("GINGERBREAD")
-    val gINGERBREAD: Int,
+    val gINGERBREAD: Long,
     @SerialName("HOUSING")
-    val hOUSING: Int,
+    val hOUSING: Long,
     @SerialName("LEGACY")
-    val lEGACY: Int,
+    val lEGACY: Long,
     @SerialName("MCGO")
-    val mCGO: Int,
+    val mCGO: Long,
     @SerialName("MURDER_MYSTERY")
-    val mURDERMYSTERY: Int,
-    @SerialName("PAINTBALL")
-    val pAINTBALL: Int,
+    val mURDERMYSTERY: Long,
+    @SerialName("PALongBALL")
+    val pALongBALL: Long,
     @SerialName("PIT")
-    val pIT: Int,
+    val pIT: Long,
     @SerialName("PROTOTYPE")
     val pROTOTYPE: Long,
     @SerialName("QUAKECRAFT")
-    val qUAKECRAFT: Int,
+    val qUAKECRAFT: Long,
     @SerialName("REPLAY")
-    val rEPLAY: Int,
+    val rEPLAY: Long,
     @SerialName("SKYBLOCK")
-    val sKYBLOCK: Int,
+    val sKYBLOCK: Long,
     @SerialName("SKYWARS")
-    val sKYWARS: Int,
+    val sKYWARS: Long,
     @SerialName("SMP")
-    val sMP: Int,
+    val sMP: Long,
     @SerialName("SPEED_UHC")
-    val sPEEDUHC: Int,
+    val sPEEDUHC: Long,
     @SerialName("SUPER_SMASH")
-    val sUPERSMASH: Int,
+    val sUPERSMASH: Long,
     @SerialName("SURVIVAL_GAMES")
-    val sURVIVALGAMES: Int,
+    val sURVIVALGAMES: Long,
     @SerialName("TNTGAMES")
-    val tNTGAMES: Int,
+    val tNTGAMES: Long,
     @SerialName("UHC")
-    val uHC: Int,
+    val uHC: Long,
     @SerialName("VAMPIREZ")
-    val vAMPIREZ: Int,
+    val vAMPIREZ: Long,
     @SerialName("WALLS")
-    val wALLS: Int,
+    val wALLS: Long,
     @SerialName("WALLS3")
-    val wALLS3: Int,
+    val wALLS3: Long,
     @SerialName("WOOL_GAMES")
-    val wOOLGAMES: Int
+    val wOOLGAMES: Long
 )

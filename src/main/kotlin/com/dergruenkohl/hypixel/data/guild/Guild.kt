@@ -13,15 +13,15 @@ data class Guild(
     @SerialName("chatMute")
     val chatMute: Long? = null,
     @SerialName("coins")
-    val coins: Int,
+    val coins: Long,
     @SerialName("coinsEver")
-    val coinsEver: Int,
+    val coinsEver: Long,
     @SerialName("created")
     val created: Long,
     @SerialName("description")
     val description: String? = null,
     @SerialName("exp")
-    val exp: Int,
+    val exp: Long,
     @SerialName("guildExpByGameType")
     val guildExpByGameType: GuildExpByGameType,
     @SerialName("_id")
