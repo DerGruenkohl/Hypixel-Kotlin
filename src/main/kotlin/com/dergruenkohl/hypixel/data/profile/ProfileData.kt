@@ -117,27 +117,27 @@ data class Player_Data(
 @Serializable
 data class Skills(
     @SerialName("SKILL_FISHING")
-    val fishing: Double,
+    val fishing: Double = 0.0,
     @SerialName("SKILL_ALCHEMY")
-    val alchemy: Double,
+    val alchemy: Double= 0.0,
     @SerialName("SKILL_RUNECRAFTING")
-    val runecrafting: Double,
+    val runecrafting: Double = 0.0,
     @SerialName("SKILL_MINING")
-    val mining: Double,
+    val mining: Double = 0.0,
     @SerialName("SKILL_FARMING")
-    val farming: Double,
+    val farming: Double= 0.0,
     @SerialName("SKILL_ENCHANTING")
-    val enchanting: Double,
+    val enchanting: Double = 0.0,
     @SerialName("SKILL_TAMING")
-    val taming: Double,
+    val taming: Double = 0.0,
     @SerialName("SKILL_FORAGING")
-    val foraging: Double,
+    val foraging: Double = 0.0,
     @SerialName("SKILL_SOCIAL")
-    val social: Double,
+    val social: Double = 0.0,
     @SerialName("SKILL_CARPENTRY")
-    val carpentry: Double,
+    val carpentry: Double= 0.0,
     @SerialName("SKILL_COMBAT")
-    val combat: Double,
+    val combat: Double= 0.0,
 ){
     companion object{
         fun toLevel(skill: Double): Int{
