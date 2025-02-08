@@ -33,7 +33,7 @@ data class Guild(
     @SerialName("name_lower")
     val nameLower: String,
     @SerialName("ranks")
-    val ranks: List<Rank>,
+    val ranks: List<Rank> = emptyList(),
     @SerialName("tag")
     val tag: String? = null,
     @SerialName("tagColor")
