@@ -95,7 +95,7 @@ data class Bestiary(
 
 @Serializable
 data class LevelData(
-    val experience: Int,
+    val experience: Int = 0,
 ){
     fun getLevel(): Int{
         return (experience/1000.0).toInt()
