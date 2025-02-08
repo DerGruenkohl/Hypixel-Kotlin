@@ -3,6 +3,7 @@ package com.dergruenkohl.hypixel.data.guild
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonElement
 
 @Serializable
 data class Guild(
@@ -23,7 +24,7 @@ data class Guild(
     @SerialName("exp")
     val exp: Long,
     @SerialName("guildExpByGameType")
-    val guildExpByGameType: GuildExpByGameType,
+    val guildExpByGameType: JsonElement? = null,
     @SerialName("_id")
     val id: String,
     @SerialName("members")
