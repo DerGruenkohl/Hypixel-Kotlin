@@ -6,7 +6,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.test.Test
 
 class GuildTests {
-    private val client = HypixelClient(Config.apikey)
+    private val client = HypixelClient(Config.apikey )
 
     @Test
     fun testGetGuildByPlayer() {
@@ -21,6 +21,7 @@ class GuildTests {
     fun testGetGuildByName() {
         runBlocking {
             val response = client.getGuildByName("Bakacord")
+            client.getGuildByName("Bakacord")
             assert(response.success)
         }
     }

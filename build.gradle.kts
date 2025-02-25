@@ -24,6 +24,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
     implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("io.github.reactivecircus.cache4k:cache4k:0.14.0")
 
     testImplementation(kotlin("test"))
 }
