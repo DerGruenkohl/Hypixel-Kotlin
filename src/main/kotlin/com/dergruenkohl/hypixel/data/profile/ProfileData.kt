@@ -10,7 +10,6 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonDecoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
-import kotlin.math.cbrt
 
 @Serializable
 internal data class ProfilesReply(
@@ -84,8 +83,42 @@ data class ProfileMember(
     @SerialName("collection")
     val collections: Collections? = null,
     val bestiary: Bestiary? = null,
+    @SerialName("slayer")
+    val slayerData: JsonElement? = null,
 
 )
+@Serializable
+data class SlayerData(
+    val slayer_quest: JsonElement? = null,
+    @SerialName("slayer_bosses")
+    val slayerBosses: SlayerBosses? = null,
+)
+@Serializable
+data class SlayerBosses(
+    val spider: Boss? = null,
+    val zombie: Boss? = null,
+    val wolf: Boss? = null,
+    val enderman: Boss? = null,
+    val blaze: Boss? = null,
+
+)
+@Serializable
+data class Boss(
+    val claimed_levels: JsonElement? = null,
+    val xp: Long? = null,
+    @SerialName("boss_kills_tier_0")
+    val killsT1: Long? = null,
+    @SerialName("boss_kills_tier_1")
+    val killsT2: Long? = null,
+    @SerialName("boss_kills_tier_2")
+    val killsT3: Long? = null,
+    @SerialName("boss_kills_tier_3")
+    val killsT4: Long? = null,
+    @SerialName("boss_kills_tier_4")
+    val killsT5: Long? = null,
+
+)
+
 @Serializable
 data class Bestiary(
     val migrations: Boolean = false,
