@@ -84,7 +84,7 @@ data class ProfileMember(
     val collections: Collections? = null,
     val bestiary: Bestiary? = null,
     @SerialName("slayer")
-    val slayerData: JsonElement? = null,
+    val slayerData: SlayerData? = null,
 
 )
 @Serializable
