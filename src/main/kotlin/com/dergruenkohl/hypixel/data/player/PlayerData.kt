@@ -9,7 +9,7 @@ data class PlayerData(
     val id: String,
     val uuid: String,
     val displayname: String? = null,
-    val networkExp: Double,
-    val lastLogout: Long,
+    val networkExp: Double = 0.0,
+    val lastLogout: Long = 0,
     val socialMedia: SocialMedia? = null
 )
