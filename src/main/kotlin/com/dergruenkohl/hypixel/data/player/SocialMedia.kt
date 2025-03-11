@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SocialMedia(
-    val links: Links
+    val links: Links? = null
 )
 @Serializable
 data class Links(
